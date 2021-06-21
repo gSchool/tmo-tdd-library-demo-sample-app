@@ -8,9 +8,9 @@ Tested with nodejs version in [.nvmrc](./.nvmrc).
 
 ## Steps of the demo are implemented as branches
 
-1. [feat/library-add-book](feat/library-add-book)
-1. [feat/library-list-books-alphabetically](feat/library-list-books-alphabetically)
-1. [feat/library-checkout-book-by-title](feat/library-checkout-book-by-title)
+1. [feat/library-add-book](/tree/feat/library-add-book)
+1. [feat/library-list-books-alphabetically](/tree/feat/library-list-books-alphabetically)
+1. [feat/library-checkout-book-by-title](/tree/feat/library-checkout-book-by-title
 
 The last branch has a sample refactor commit for the red-green-refactor cycle.
 
