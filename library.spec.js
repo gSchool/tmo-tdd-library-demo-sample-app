@@ -34,5 +34,41 @@ describe('Library', () => {
         expect(_library.books).toEqual([_book3, _book2, _book1]);
       });
     });
+
+    describe('When I search for a book by title', () => {
+      test('Then I get the book of that title', () => {
+        const Library = require('./library.js');
+        const Book = require('./book.js');
+
+        const _library = new Library();
+
+        const _book1 = new Book("War and Peace");
+        const _book2 = new Book("Lolita");
+        const _book3 = new Book("Brothers Karamzov");
+
+        _library.add(_book1);
+        _library.add(_book2);
+        _library.add(_book3);
+
+        expect(_library.search('War and Peace')).toEqual(_book1);
+      });
+    });
+
+    test('Then I get the book of that title no matter the order of books added', () => {
+      const Library = require('./library.js');
+      const Book = require('./book.js');
+
+      const _library = new Library();
+
+      const _book1 = new Book("War and Peace");
+      const _book2 = new Book("Lolita");
+      const _book3 = new Book("Brothers Karamzov");
+
+      _library.add(_book2);
+      _library.add(_book3);
+      _library.add(_book1);
+
+      expect(_library.search('War and Peace')).toEqual(_book1);
+    });
   });
 });
