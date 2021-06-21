@@ -14,4 +14,16 @@ Tested with nodejs version in [.nvmrc](./.nvmrc).
 
 The last branch has a sample refactor commit for the red-green-refactor cycle.
 
+The idea behind each feature branch is to demonstrate a few concepts:
+
+- Granular features
+- Granular commits for test/code under test
+- Trunk based development w. short-lived feature branches
+
 Another consideration for the demo may be to refactor the sorting of books in the `get books()` method to not sort, but rather to sort on insertion, so that the `get books()` operation is more performant for reads.
+
+### Master branch is the final solution
+
+The master branch contains the solution after all merges from the feature branches.
+
+This may be used to demonstrate trunk based developmemt practice.
